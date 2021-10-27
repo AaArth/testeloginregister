@@ -4,10 +4,18 @@
 
     <p>Faça seu login para aproveitar a nossa loja!</p>
 
-    <form>
+    <form
+      id="formId"
+      (ngSubmit)="onSubmit(validacaoLogin)"
+      #validacaoLogin="ngForm"
+    >
       <div class="mb-3">
         <input
           type="email"
+          name="email"
+          ngModel
+          required
+          #email="ngModel"
           class="form-control"
           id="loginEmail"
           placeholder="Enter Email"
@@ -17,13 +25,23 @@
       <div class="mb-3">
         <input
           type="password"
+          name="password"
+          ngModel
+          required
+          #password="ngModel"
           class="form-control"
           id="loginPassword"
           placeholder="Enter Password"
         />
       </div>
 
-      <button type="submit" class="btn btn-primary">ENTRAR</button>
+      <button
+        type="submit"
+        [disabled]="validacaoLogin.invalid"
+        class="btn btn-primary"
+      >
+        ENTRAR
+      </button>
 
       <div class="mb-3">
         <a href="#">Esqueceu sua senha? Clique aqui!</a>
