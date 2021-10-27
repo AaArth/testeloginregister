@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import { NgForm } from '@angular/forms';
+
 
 
 @Component({
@@ -16,14 +17,11 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  email = new FormControl('', [Validators.required, Validators.email]);
+  onSubmit(f: NgForm) {
+    console.log(f.value);
+    console.log(f.valid);
 
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'Você precisa adicionar um e-mail.';
-    }
 
-    return this.email.hasError('email') ? 'Não é um email válido.' : '';
   }
 
 }

@@ -7,10 +7,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* sistema de validação  de e-mail */
 .ng-valid[required], .ng-valid.required  {
-  border-left: 5px solid #42A948; /* green */
+  border-left: 4px solid #42A948; /* green */
 }
 
 .ng-invalid:not(form)  {
-  border-bottom: 5px solid #a94442; /* red */
+  border-left: 4px solid #a94442; /* red */
 }
 /* fim sistema de validação  de e-mail */
