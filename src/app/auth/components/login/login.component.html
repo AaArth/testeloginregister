@@ -1,51 +1,63 @@
-<div class="row">
-  <div class="col-md-6 offset-md-3 mt-4">
-    <h3>Bem vindo!</h3>
-
-    <p>Faça seu login para aproveitar a nossa loja!</p>
-
-    <form
-      id="formId"
-      (ngSubmit)="onSubmit(validacaoLogin)"
-      #validacaoLogin="ngForm"
+<div class="container">
+  <div class="row">
+    <div
+      class="
+        col-lg-6
+        offset-lg-3
+        mt-4
+        rounded-lg
+        border
+        bg-secondary
+        text-white
+      "
     >
-      <div class="mb-3">
-        <input
-          type="email"
-          name="email"
-          ngModel
-          required
-          #email="ngModel"
-          class="form-control"
-          id="loginEmail"
-          placeholder="Enter Email"
-        />
-      </div>
+      <h3 class="mt-3">Bem vindo!</h3>
 
-      <div class="mb-3">
-        <input
-          type="password"
-          name="password"
-          ngModel
-          required
-          #password="ngModel"
-          class="form-control"
-          id="loginPassword"
-          placeholder="Enter Password"
-        />
-      </div>
+      <p>Faça seu login para aproveitar a nossa loja!</p>
 
-      <button
-        type="submit"
-        [disabled]="validacaoLogin.invalid"
-        class="btn btn-primary"
+      <form
+        id="formId"
+        (ngSubmit)="onSubmit(validacaoLogin)"
+        #validacaoLogin="ngForm"
       >
-        ENTRAR
-      </button>
+        <div class="mb-3">
+          <input
+            type="email"
+            name="email"
+            ngModel
+            required
+            #email="ngModel"
+            class="form-control"
+            id="loginEmail"
+            placeholder="Enter Email"
+          />
+        </div>
 
-      <div class="mb-3">
-        <a href="#">Esqueceu sua senha? Clique aqui!</a>
-      </div>
-    </form>
+        <div class="mb-3">
+          <input
+            type="password"
+            name="password"
+            ngModel
+            required
+            #password="ngModel"
+            class="form-control"
+            id="loginPassword"
+            placeholder="Enter Password"
+          />
+        </div>
+
+        <button
+          type="submit"
+          [disabled]="validacaoLogin.invalid"
+          class="btn btn-primary mb-3"
+        >
+          ENTRAR
+        </button>
+
+        <div class="mb-3">
+          <a href="#">Esqueceu sua senha? Clique aqui!</a>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
